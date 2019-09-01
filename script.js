@@ -46,7 +46,7 @@ let appData = {
 
         let addExpenses = prompt('Перечислите возможные расходы', 'Еда, Машина, Учеба');
             appData.addExpenses = addExpenses.toLowerCase().split(',');
-            appData.addExpenses = addExpenses[0].toUpperCase() + addExpenses.substr(1);
+            // appData.addExpenses = addExpenses[0].toUpperCase() + addExpenses.substr(1);
             appData.deposit = confirm('Есть ли у вас депозит в банке?');
 
         let itemExpenses,
