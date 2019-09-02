@@ -5,7 +5,7 @@ let money,
         do{
             money = prompt('Ваш месячный доход?', 50000); // Доход в месяц
         }
-        while(isNaN(money) || money === '' || money === null);
+        while(!isNaN(money) || money == '' || money === null);
     };
 
 start();
@@ -34,7 +34,7 @@ let appData = {
             do {
                 itemIncome = prompt('Какой у вас дополнительный зароботок?', 'Таксую');
             }
-            while(itemIncome == '' || itemIncome === null);
+            while(!isNaN(itemIncome) || itemIncome == '' || itemIncome === null);
 
             do {
                 cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
@@ -57,7 +57,7 @@ let appData = {
             do {
                 itemExpenses = prompt('Какие обязательные ежемесячные расходы у вас есть?', 'Кварплата');
             }
-            while(itemExpenses == '' || itemExpenses === null);
+            while(!isNaN(itemExpenses) || itemExpenses == '' || itemExpenses === null);
 
             do {
                 cashExpenses = +prompt('Во сколько это обойдется?', 2500);
