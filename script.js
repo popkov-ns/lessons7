@@ -5,7 +5,7 @@ let money,
         do{
             money = prompt('Ваш месячный доход?', 50000); // Доход в месяц
         }
-        while(!isNaN(money) || money == '' || money === null);
+        while(isNaN(money) || money == '' || money === null);
     };
 
 start();
@@ -144,5 +144,17 @@ console.log('Дополнительный доход', appData.income);
 console.log('Дополнительные расходы: ', appData.addExpenses);
 
 for (let key in appData) {
-    console.log('Напи программа включает в себя данные: ' + key);
+    console.log('Наша программа включает в себя данные: ' + key);
 }
+
+function getLetters(string) {
+    let splitString = string.toLowerCase().split(' ');
+    
+    for (let i = 0; i < splitString.length; i++) {
+        splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].substring(1);
+    }
+
+    return splitString.join(' ');
+}
+
+console.log(getLetters('Дополнительные расходы: ' + appData.addExpenses));
